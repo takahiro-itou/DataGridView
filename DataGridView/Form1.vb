@@ -1,11 +1,15 @@
 ﻿Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim col As MyDataGridViewCell = New MyDataGridViewCell()
+        Dim c As DataGridViewColumn
+
         With DataGridView1
             .ColumnCount = 4
 
             For Each c In .Columns
-                c.sortmode = DataGridViewColumnSortMode.NotSortable
+                c.SortMode = DataGridViewColumnSortMode.NotSortable
+                c.CellTemplate = col
             Next
 
             .RowCount = 5
