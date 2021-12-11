@@ -15,7 +15,11 @@
             .RowCount = 5
             With .Rows(1)
                 .Cells(0).Value = 123
+                .Cells(0).Style.BackColor = Color.Red
+                .Cells(0).Style.SelectionForeColor = Color.Black
+
                 .Cells(1).Value = 234
+                .Cells(1).Style.SelectionForeColor = Color.Red
             End With
         End With
 
